@@ -7,7 +7,7 @@ type: docs
 # code/projects
 ---
 
-## A number of creative projects, libraries and codebases have emerged from the members of the CCL. This page acts as a resource to document and archive those projects.
+## A number of creative projects, libraries and codebases have emerged from the creative coders in Greater Huddersfield. This page acts as a resource to document and archive those projects.
 
 {{< columns >}}
 
