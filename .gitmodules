@@ -1,3 +1,4 @@
 [submodule "themes/book"]
 	path = themes/book
-	url = git@github.com:jamesb93/hugo-book.git
+	url = https://github.com/jamesb93/hugo-book.git
+	branch = dark-coder-theme
