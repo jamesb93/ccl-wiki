@@ -1,6 +1,6 @@
 baseURL: /
 languageCode: "en-us"
-title: Huddersfield Creative Coding Lab
+title: Huddersfield Creative Coding
 theme: book
 
 publishDir: public
