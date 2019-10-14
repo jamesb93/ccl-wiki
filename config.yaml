@@ -1,0 +1,12 @@
+baseURL: /
+languageCode: "en-us"
+title: Creative Coding Lab
+theme: book
+
+publishDir: public
+
+enableGitInfo: false
+params:
+  BookToC: false
+  BookRepo: false
+  BookSearch: true

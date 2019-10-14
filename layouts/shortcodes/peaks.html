@@ -1,0 +1,71 @@
+{{ if not (.Page.Scratch.Get "peaks") }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/peaks.js/0.13.0/peaks.min.js" integrity="sha256-GS1DXq3Zq0HzUVDxngHxmtu5leUMVmESODCMyY+pUAA=" crossorigin="anonymous"></script>
+{{ .Page.Scratch.Set "peaks" true }}
+{{ end }}
+
+{{ if not (.Page.Scratch.Get "audio_peaks") }}
+{{ .Page.Scratch.Set "audio_peaks" 1}}
+{{ else }}
+{{ .Page.Scratch.Add "audio_peaks" 1 }}
+{{ end }}
+{{ $num := .Page.Scratch.Get "audio_peaks"}}
+{{ $id := (printf "audio_peaks_%d" $num)}}
+
+<div>
+    <div id="peaks-zoom-{{ .Page.Scratch.Get "audio_peaks"}}"></div>
+    <div id="peaks-overview-{{ .Page.Scratch.Get "audio_peaks"}}"></div>
+    <br>
+    <div id="peaks-control" class="oneline">
+        <audio id="peaks-audio{{ .Page.Scratch.Get "audio_peaks"}}" controls=controls class="oneline">
+            <source src="/audio/{{ index .Params 0}}.mp3" type="audio/mp3">
+            Your browser does not support audio.
+        </audio>
+        <div id="controls" class="oneline">
+            <button id="zoomIn-{{ .Page.Scratch.Get "audio_peaks"}}" class="button">Zoom In</button>
+            <button id="zoomOut-{{ .Page.Scratch.Get "audio_peaks"}}" class="button">Zoom Out</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(Peaks) {
+const options = {
+    containers: {
+        zoomview: document.getElementById('peaks-zoom-{{ .Page.Scratch.Get "audio_peaks"}}'),
+        overview: document.getElementById('peaks-overview-{{ .Page.Scratch.Get "audio_peaks"}}')
+    },
+    mediaElement: document.getElementById('peaks-audio{{ .Page.Scratch.Get "audio_peaks"}}'),
+    dataUri: {
+        arraybuffer: '/waveforms/{{ index .Params 0}}.dat'
+    },
+    height: 55,
+    inMarkerColor: '#a0a0a0',
+    outMarkerColor: '#a0a0a0',
+    zoomWaveformColor: 'rgba(0, 128, 255, 1)',
+    overviewWaveformColor: 'rgba(0,0,0,0.2)',
+    overviewHighlightRectangleColor: 'grey',
+    segmentColor: 'rgba(255, 161, 39, 1)',
+    playheadColor: 'rgba(0, 0, 0, 1)',
+    playheadTextColor: '#aaa',
+    showPlayheadTime: false,
+    pointMarkerColor: '#FF0000',
+    axisGridlineColor: '#ccc',
+    axisLabelColor: '#aaa',
+    randomizeSegmentColor: true
+};
+
+Peaks.init(options, function(err, peaks) {
+    document.getElementById('zoomIn-{{ .Page.Scratch.Get "audio_peaks"}}').addEventListener("click", function() {
+        peaks.zoom.zoomIn();
+      });
+  
+    document.getElementById('zoomOut-{{ .Page.Scratch.Get "audio_peaks"}}').addEventListener("click", function() {
+        peaks.zoom.zoomOut();
+    });
+});
+})(peaks);
+</script>
+<br>
+<hr>
+
