@@ -7,7 +7,7 @@ type: docs
 # people
 ---
 
-The people listed here are either residents of or significant contributors to the creative coding scene in Huddersfield.
+## The people listed here are either residents of or significant contributors to the creative coding scene in Huddersfield.
 
 {{< columns >}}
 
