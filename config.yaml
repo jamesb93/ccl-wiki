@@ -3,7 +3,7 @@ languageCode: "en-us"
 title: Huddersfield Creative Coding Lab
 theme: book
 
-publishDir: docs
+publishDir: public
 
 enableGitInfo: true
 params:
