@@ -3,10 +3,10 @@ languageCode: "en-us"
 title: Huddersfield Creative Coding Lab
 theme: book
 
-publishDir: public
+publishDir: docs
 
-enableGitInfo: false
+enableGitInfo: true
 params:
   BookToC: false
-  BookRepo: false
+  BookRepo: https://github.com/jamesb93/huddersfield-creative-coding
   BookSearch: true

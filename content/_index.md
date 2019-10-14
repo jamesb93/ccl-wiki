@@ -3,8 +3,10 @@ title: home
 type: docs
 ---
 
-# Blog
+# news and coding events
 ---
+
+
 
 
 

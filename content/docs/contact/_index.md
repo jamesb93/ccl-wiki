@@ -7,8 +7,8 @@ type: docs
 # contact
 ---
 
-The Huddersfield CCL is primarily run by Dr. Alex Harker.
+This page is run by James Bradbury.
 
-He can be reached via his e-mail at 
+All communication should be directed toward jamesbradbury93(at)gmail.com
 
-a.harker(at)hud.ac.uk
+You are also welcome to submit pull requests at the [source code](https://github.com/jamesb93/huddersfield-creative-coding).
