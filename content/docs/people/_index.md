@@ -48,5 +48,9 @@ type: docs
 "James Bradbury is a composer and creative coder living in Huddersfield since 2017. His work explores the potential of the computer to work in formalising the creative process and exploting this to creative ends."
 >}}
 
+{{< person "rconstanzo" "Rodrigo Constanzo"
+"Rodrigo Constanzo is not always with us in person, but sporadically joins us in Huddersfield for intense geek-outs and workshops. He is an improviser, coder, teacher and hacker with all things sound and instruments."
+>}}
+
 {{< /columns >}}
 
