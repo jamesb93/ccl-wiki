@@ -18,7 +18,12 @@ type: docs
 
 {{< person "fcameli" 
 "Francesco Cameli" 
-"Francesco is a coder, composer specialising in C++, SuperCollider and live coding. He currently is studying his Masters at the University."
+"Francesco is a coder, composer specialising in C++, SuperCollider and live coding. He currently is studying his Masters at the University of Huddersfield."
+>}}
+
+{{< person "ogreen"
+"Owen Green"
+"Owen's practice centres around improvising and composing with computers and people, with specific interest in the perversion and (mis)application of technology in creative settings."
 >}}
 
 <--->

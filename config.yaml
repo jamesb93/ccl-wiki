@@ -5,7 +5,7 @@ theme: book
 
 publishDir: public
 
-enableGitInfo: true
+enableGitInfo: false
 params:
   BookToC: false
   BookRepo: https://github.com/jamesb93/huddersfield-creative-coding
