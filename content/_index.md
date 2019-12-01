@@ -21,6 +21,7 @@ So far we have explored a number of topics together. To give you an idea:
 - js
 - Visualisation
 - Machine Learning
+- Python
 - Audio Decomposition
 - Architecture of Patches and Text-Based Code
 - Version Control Crash Course
