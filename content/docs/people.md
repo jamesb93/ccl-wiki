@@ -12,7 +12,7 @@ type: docs
 {{< columns >}}
 
 {{< person "aharker" "Alex Harker" "http://www.alexanderjharker.co.uk/"
-"Alex is a Senior Lecturer working at the Huddersfield of University. He is a creative coder, composer and hardcore DSP programmer."
+"Alex is a Senior Lecturer working at the Huddersfield of University. He is a creative coder, composer and hardcore DSP programmer." 
 >}}
 
 {{< person "fcameli" "Francesco Cameli" "https://github.com/vitreo12"

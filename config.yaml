@@ -15,3 +15,8 @@ params:
   BookDateFormat: 'Jan 2, 2006'
   BookToC: false
   BookSearch: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

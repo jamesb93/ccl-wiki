@@ -9,7 +9,6 @@ headless = true
 
 **info**
 ---
-- [about]({{< relref "/docs/about" >}})
 - [people]({{< relref "/docs/people" >}})
 - [projects]({{< relref "/docs/projects" >}})
 - [contact]({{< relref "/docs/contact" >}})
