@@ -1,6 +1,6 @@
 baseURL: /
 languageCode: "en-us"
-title: Huddersfield Creative Coding
+title: Creative Coding Hackspace
 theme: book
 
 publishDir: public
