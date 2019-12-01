@@ -1,10 +1,3 @@
----
-title: about
-weight: 1
-type: docs
-bookFlatSection: false
----
-
 # Huddersfield Creative Coding
 ---
 
