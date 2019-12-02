@@ -29,6 +29,8 @@ So far we have people from a number of backgrounds who are working with a number
 - Video Art
 - Kinetc Sculptures
 
+This website acts as form of documentation for what happens in the hackspace and a way for people to formally communicate what they learn in the hope that others can learn from this too.
+
 We currently meet in **OA5/13** at the University on **Fridays** from **2pm - 5pm**. 
 
 Any questions can be forwarded to the admin. james.bradbury(at)hud.ac.uk
