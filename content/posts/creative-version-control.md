@@ -16,11 +16,15 @@ The workshop was mainly aimed at UNIX systems, so a lot or all of these commands
 
 On MacOS you can open up the default terminal by opening Terminal.app. Many people change their default terminal to [iTerm2](https://iterm2.com) as it has more features than the default application. If you are just beginning though I would recommend sticking to the default app and once you find that limiting you can investigate other terminal emulators. On Linux, popular terminal emulators are GNOME terminal, Guake, Yakuake and xterm but entirely depends on your distribution.
 
+## The shell
+
 When you open the terminal you are presented with almost nothing, just a small block of text on the left of the screen with the name of your computer. At this point you are ready to execute some commands.
 
 <img src="/img/cvc/blank-terminal.png" alt="A blank ZSH terminal">
 
 The first thing to know is that the application which interprets the commands you send to the terminal is a program like any other. There are many flavours of _shells_ that you can use and by default MacOS will use **bash** or **zsh** depending on your OS version. There are small differences between these two shells and for the purpose of what this article covers it is not necessary to understand too deeply how they vary. 
+
+## ls
 
 The second concept to understand is that the shell is always _somewhere_ in your filesystem. When you boot up a terminal, it starts at your home folder. You can see at the top of the preceding image that my terminal tells me where it currently is (/Users/james) and that it is running **zsh** as the shell. The home folder can also be abbreviated to **~/** which you can see on the left side of the image.
 
@@ -32,9 +36,13 @@ Congratulations, you just executed your first program from the command-line. **l
 
 <img src="/img/cvc/finder.png" alt="Parity with the finder">
 
+## cd
+
 Now you might be wondering how you can navigate to different folders and files. The **cd** (change directory) is the program that helps you move around as you would in Finder or a GUI application. As you can see below, I execute the command `cd dev` which then transports my **current working directory** to the dev folder. The **prompt** of my command-line changes to reflect this movement throughout the filesystem and I can then execute **ls** again to show files inside **~/dev**. Whenever we pass additional bits of text to a program these are called _arguments_. In this case **dev** is an argument to **cd** and cd interprets what you mean by the simple virtue that it immediately comes after **cd**. Other programs can take arguments with a flag in both a long and short format like **-l** or **-limit** for example.
 
 <img src="/img/cvc/cd.png" alt="Parity with the finder">
+
+## mkdir
 
 Say now you want a new folder in this directory and to create a new file inside of that folder.
 
@@ -42,18 +50,40 @@ Let's execute the command **mkdir** (make directory) with an argument for the na
 
 <img src="/img/cvc/mkdir.png" alt="the mkdir command">
 
+## touch
+
 Now to create a file, we can execute the program **touch** with the new file name as the first argument. Again we can verify that this new file exists by looking in the finder as well as calling **ls** again to print the files inside of a directory.
 
 <img src="/img/cvc/touch.png" alt="the touch command">
 
-One final concept to understand is that the inputs and outputs of the shell can be 'piped' between each other as they emit and receive information that fits a specification. For example, I can pipe **ls** to another program called **grep** which you might like to think of as a filter of that text like find/replace in a text editor. In the below example, I pipe the output of **ls** to **grep** so that I can find all the files that contain the phrase _gesture_maker_.
+## piping
+
+One final concept to understand is that the inputs and outputs of the shell can be 'piped' between each other as they emit and receive information that fits a specification. For example, I can pipe **ls** to another program called **grep** which you might like to think of as a filter of that text like find/replace in a text editor. In the below example, I pipe the output of **ls** to **grep** so that I can find all the files that contain the phrase _gesture_maker_. You might also be interested in the **>** redirection pipe which allows you to pipe the output of a command line program to a file. For example, try **ls > ls_output.txt** which will create a new file contaning the output of ls.
 
 <img src="/img/cvc/piping.png" alt="piping commands">
 
 This just about covers enough material to get you started in the terminal. Of course, the best way to learn is to try using the terminal and to get stuck. Once you become more fluent in the commands it can be a great way to interact with your operating system with just your keyboard and with a minimal interface. It is also helpful for later when you want to create and manage git respositories more fluently and without a GUI application.
 
-
 # git
+
+Okay, so now lets start learning some **git**. The first thing to know is **git** is __NOT__ github. git can exist without the internet ever being connected to your machine and is just a program which tracks changes inside a directory.  all that this is is a normal directory on your computer with a small hidden folder named **.git**. This hidden folder contains information about changes, branches, remotes and other git related concepts which help you to version control the files that exist in the same directory.
+
+Conveniently, most UNIX based operating systems are shipped with git installed and you can use it without every having to install it yourself. What we're going to do is learn first how to _init_ a git repository, _commit_ changes to a file inside the repository and then _push_ those changes to a _remote_. After that, it will be demonstrated how someone else can _fork_ your repository, _commit_ their own changes and subsequently submit a _pull request_ which you integrate back into the original project.
+
+## initialising (init) a repository
+
+
+# JACOB
+# JACOB
+# JACOB
+# JACOB
+# JACOB
+# JACOB
+# JACOB
+# JACOB
+# JACOB
+
+
 
 
 
