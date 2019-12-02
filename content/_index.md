@@ -13,7 +13,7 @@ The huddersfield Creative Coding Hackspace is an informal weekly session held wi
 
 3. _Sustain_ the collaborative spirit of creative coding with the University and generate a sense of community
 
-So far we have people from a number of backgrounds who are working with a number of technologies. For example: 
+So far we have people from a number of backgrounds who are working with a number of technologies and in several areas of interest. For example: 
 
 - ReaScript
 - SuperCollider
@@ -22,17 +22,14 @@ So far we have people from a number of backgrounds who are working with a number
 - Visualisation
 - Machine Learning
 - Python
-- Audio Decomposition
-- Architecture of Patches and Text-Based Code
-- Version Control Crash Course
+- Audio decomposition
+- Architecture of Max patches versus text-based code
+- Version control
 - Raspberry Pi/Arduino/Embedded
-- Video Art
-- Kinetc Sculptures
+- Kinetc sculptures
 
 This website acts as form of documentation for what happens in the hackspace and a way for people to formally communicate what they learn in the hope that others can learn from this too.
 
 We currently meet in **OA5/13** at the University on **Fridays** from **2pm - 5pm**. 
 
 Any questions can be forwarded to the admin. james.bradbury(at)hud.ac.uk
-
-
