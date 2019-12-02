@@ -1,9 +1,3 @@
----
-title: people
-weight: 4
-type: docs
----
-
 # people
 ---
 

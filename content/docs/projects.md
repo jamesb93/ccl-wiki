@@ -1,9 +1,3 @@
----
-title: code/projects
-weight: 2
-type: docs
----
-
 # code/projects
 ---
 
