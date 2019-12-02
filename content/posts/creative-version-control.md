@@ -70,9 +70,19 @@ Okay, so now lets start learning some **git**. The first thing to know is **git*
 
 Conveniently, most UNIX based operating systems are shipped with git installed and you can use it without every having to install it yourself. What we're going to do is learn first how to _init_ a git repository, _commit_ changes to a file inside the repository and then _push_ those changes to a _remote_. After that, it will be demonstrated how someone else can _fork_ your repository, _commit_ their own changes and subsequently submit a _pull request_ which you integrate back into the original project.
 
+## high level git concepts
+- repository
+- committing
+- branches
+- network based things
+	- pushing
+	- pulling
+	- forking
+	- fetching
+
 ## initialising (init) a repository
 
-
+The first step to using git respository is to initialise a folder. This is performed with the command **git init** on the command line after you have used **cd** to navigate to that folder. What you will notice is that if when you then perform the command **ls -a** (which lists all files and folders in the current working directory including hidden ones) there is now a new folder called **.git**. This folder contains all of the information necessary for the git executable to track various 'versions' of files within that directory. 
 # JACOB
 # JACOB
 # JACOB
