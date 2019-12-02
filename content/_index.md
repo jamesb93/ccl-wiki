@@ -13,7 +13,7 @@ The huddersfield Creative Coding Hackspace is an informal weekly session held wi
 
 3. _Sustain_ the collaborative spirit of creative coding with the University and generate a sense of community
 
-So far we have explored a number of topics together. To give you an idea:
+So far we have people from a number of backgrounds who are working with a number of technologies. For example: 
 
 - ReaScript
 - SuperCollider
