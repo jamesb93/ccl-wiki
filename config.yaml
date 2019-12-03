@@ -1,12 +1,22 @@
 baseURL: /
 languageCode: "en-us"
-title: Huddersfield Creative Coding
+title: Creative Coding Hackspace
 theme: book
 
 publishDir: public
 
-enableGitInfo: false
+enableGitInfo: true
+disableKinds: ['taxonomy', 'taxonomyTerm']
+
 params:
-  BookToC: false
   BookRepo: https://github.com/jamesb93/huddersfield-creative-coding
   BookSearch: true
+  BookMenuBundle: /menu
+  BookDateFormat: 'Jan 2, 2006'
+  BookToC: false
+  BookSearch: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
