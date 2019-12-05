@@ -14,3 +14,8 @@ params:
   BookMenuBundle: /menu
   BookDateFormat: 'Jan 2, 2006'
   BookToC: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
