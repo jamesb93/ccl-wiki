@@ -1,5 +1,4 @@
-# Version Control
-## A short crash course on the command-line and git
+# Creative Version Control
 
 ### [James Bradbury](https://www.jamesbradbury.xyz) and [Jacob Hart](https://jacob-hart.com)
 ---
@@ -65,38 +64,66 @@ One final concept to understand is that the inputs and outputs of the shell can 
 
 This just about covers enough material to get you started in the terminal. Of course, the best way to learn is to try using the terminal and to get stuck. Once you become more fluent in the commands it can be a great way to interact with your operating system with just your keyboard and with a minimal interface. It is also helpful for later when you want to create and manage git respositories more fluently and without a GUI application.
 
+---
+
 # git
 
-Okay, so now lets start learning some **git**. The first thing to know is **git** is __NOT__ github. git can exist without the internet ever being connected to your machine and is just a program which tracks changes inside a directory.  all that this is is a normal directory on your computer with a small hidden folder named **.git**. This hidden folder contains information about changes, branches, remotes and other git related concepts which help you to version control the files that exist in the same directory.
+Okay, so now lets start learning some **git**. The first thing to know is **git** is __NOT__ github. git can exist without the internet ever being connected to your machine and is just a program which tracks changes inside a directory. All that this is is a normal directory on your computer with a small hidden folder named **.git**. This hidden folder contains information about changes, branches, remotes and other git related concepts which help you to version control the files that exist in the same directory.
 
 Conveniently, most UNIX based operating systems are shipped with git installed and you can use it without every having to install it yourself. What we're going to do is learn first how to _init_ a git repository, _commit_ changes to a file inside the repository and then _push_ those changes to a _remote_. After that, it will be demonstrated how someone else can _fork_ your repository, _commit_ their own changes and subsequently submit a _pull request_ which you integrate back into the original project.
 
-## high level git concepts
-There a number of concepts that are important to understand prior to jumping into managing a git repository. Most of all, it is essential to understand what even git does (but I assume you didn't get this far without at least knowing a little bit about what version control and more specifically git does). If you jumped in blindly, then its quite simple - git is a program that tracks the changes of files within a directory and all of its subdirectories. It does this by tracking very small portions of each file called "hashes" and comparing the hashes everytime a file is modified within the directory. When you change a file in a git repository, these changes aren't _committed_ until you specifically tell git to do so (a sane mechanism to ensure that every small change is not made permanent in the git history). As a result, a git history contains a series of _commits_ reflecting points at which you as the user have committed your work. You are able to at any point revert to a previous commit as a way of backtracking if the code you've written is broken or a new feature somehow breaks existing functionality.   The has information is stored inside a hidden folder called .git  the basic concept to understand is that the git application doesn't hold any inform
-- repository
-- committing
-- branches
-- network based things
-	- pushing
-	- pulling
-	- forking
-	- fetching
+To make things easier, it can be useful to download a _git client_ on your machine. Although most of the following things can be done via the command line, one of these programs will make your life a whole lot easier. We can recommend [Fork](https://git-fork.com), [GitKraken](https://www.gitkraken.com) or [GitHub Desktop](https://desktop.github.com).
 
 ## initialising (init) a repository
 
-The first step to using git respository is to initialise a folder. This is performed with the command **git init** on the command line after you have used **cd** to navigate to that folder. What you will notice is that if when you then perform the command **ls -a** (which lists all files and folders in the current working directory including hidden ones) there is now a new folder called **.git**. This folder contains all of the information necessary for the git executable to track various 'versions' of files within that directory. 
-# JACOB
-# JACOB
-# JACOB
-# JACOB
-# JACOB
-# JACOB
-# JACOB
-# JACOB
-# JACOB
+So, you have an idea for a great project where version control would be useful. Maybe this project exists already, maybe you haven't even started it yet. You'll want to make sure that all the files concerning your project are grouped into one folder. Next, we need to create the hidden **.git** folder inside this project folder which will handle all the git functionalities. We can do this from the command line - below we've gone to the desktop, created our project folder, then used the command `git innit` and we're done!
 
+<img src="/img/cvc/01_innit_cmd_line.png" alt="git innit command">
 
+If you go to the project folder in your finder, you'll find that it appears to be empty. This is because the **.git** folder is hidden - to show it, hit Cmd+Shift+Dot and you should see this...
 
+<img src="/img/cvc/02_hidden_git_folder.png" alt="see hidden folder">
 
+Alternatively you could use the `ls -a` in the command line to see all the hidden files and folders. You won't ever need to do anything with this folder, so you can go ahead and hide it again. But know that this is where all the magic of git happens! When you create a repository with one of the programs like _Fork_ or _GitKraken_, this folder gets created automatically. Now we can start adding files to our project.
 
-As both of us (the authors) are specialised in music, we deal with Max patches (JSON files essentially), SuperCollider, javascript and Python files all the time and large projects that integrate a number of different text based formats alongside audio files for corpi and recordings. One practice that can be seen often is to have a number of top-level Max patchers.
+## commiting (commit) to a repository
+
+Let's create some simple, empty files using the `touch` command. These files are now in the folder, but we haven't told git to add them yet. To create a new _commit_ (a state of your project that you can go back to), there are two parts: _adding_ files and modifications, then _commiting_ these added files and modifications. Here we add files using the  `git add` command, then commit using the `git commit` command. When you commit, you'll be asked to describe the modifications made - we just wrote _initial commit_, to indicate that this was the first commit to git (we then hit ESC and type :wq to exit the text editor).
+
+<img src="/img/cvc/03_commit.png" alt="command line commit">
+
+If we open up our repository in on of the programs talked about above, we can visualise these changes we made. Here, in _Fork_, we see our initial commit, with the two files we added. A quick note, we could have just used the command `git commit -a` to add and commit everything, and `git commit -m "initial commit"` to bypass the text editor part.
+
+<img src="/img/cvc/04_initial_commit_fork.png" alt="initial commit in fork">
+
+How can we add the other file to our git repository? We could do it in the same way, using the comand line. However, it may be easier to use the GUI in _fork_. If we look at the top left, we see that there is one change that can be commited. Let's click on this to see the changes. We see that the file we didn't initially commit is there. To make a new commit, we first need to _stage_ the changes we want to make, add a _comment_ for out commit in the bottom right (this was the text editor part from before), then click _commit_! Now if we go back to the _master branch_, we see that there is a new commit.
+
+<img src="/img/cvc/05_second_commit.png" alt="second commit">
+
+We now see how we can keep a log of how a project progresses, and use this to go back to a project's previous state. But what if we want to have this log online, and let other people work on it also? This is where something like [github](https://github.com) will come in.
+
+## pushing (push) changes to a repository
+
+First of all, we're going to have to get our repository linked up to _github_. To do this, go to _github_ and select _new repository_. You'll be presented with a screen like the one below. You can give it a name and a description, and set a few other parameters. The _.gitignore_ is for giving git files you don't want to be tracked (for example, _.wav_ audio files are heavy and not necesarily something you would want to upload to github). We can also choose to make a _README.md_ file - this is a file in the root directory of you project folder which will appear on the github page of the repository, usually explaining what the project is about. It's written in markdown format, and fairly simple to format. 
+
+<img src="/img/cvc/06_github_repo_create.png" alt="creating a repo on github">
+
+Next you'll be directed to the page below. Github makes our life easier by telling us exactly what to do! We need to link up the folder on our local machine to the repository made on github. To do this, in the command line we copy the the text under the **...or push an existing repository from the command line** section, the `git remote add origin <ssh or https>` command. This will link up your repositories.
+
+<img src="/img/cvc/07_github_ssh.png" alt="created repo github">
+
+Note that all of this can be done in the programs talked about earlier with an easy to use GUI, but it's useful to know how it's done in the command line. The last step is to _push_ content on your local machine onto the github repo. You can do this using the `git push` command, or by finding the _push_ button within you program. Note that when pushing, you can choose which _branch_ to push to, we'll go over branches in the next, final section.
+
+## forking (fork) a repository
+
+Say we would like to work off of someone else's repository. We will need to _fork_ the repository in question. This is as easy as going to the repository on github, and pressing _Fork_ in the top right of the screen. We will then need to _clone_ this repository onto our machine. We can do this from the command line with the `git clone <repository url>` or through one of our programs. Below we see that we have _forked_ the _FrameLib_ repository and cloned it onto our machine. This is our own version of _FrameLib_ at the time it was forked.
+
+<img src="/img/cvc/08_forked_repo.png" alt="forked framelib repository">
+
+Note that there are several _branches_ which can run in parallel indicated by the coloured lines along the side. This is so that you can work with serveral versions of the code, versions which could potentially break or conflict with each other. When working with branches, we recommend you use a GUI as things can get quite complicated otherwise. Creating a new branch is as simple as selecting _create new branch_ in _Fork_. You can then merge branches back into the main branch, or let them die!
+
+Finally, once you've made changes to a forked repository, you can ask the original creator if they would like to incorporate the changes you've made into their repository. This is called a _pull request_. This is as easy as pushing any changes you've made to your github fork of the repository, and then selecting _pull requests_.
+
+---
+
+As both of us (the authors) are specialised in music, we deal with Max patches (JSON files essentially), SuperCollider, javascript and Python files all the time and large projects that integrate a number of different text based formats alongside audio files for corpora and recordings. One practice that can be seen often is to have a number of top-level Max patchers.
