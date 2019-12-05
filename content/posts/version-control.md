@@ -123,7 +123,3 @@ Say we would like to work off of someone else's repository. We will need to _for
 Note that there are several _branches_ which can run in parallel indicated by the coloured lines along the side. This is so that you can work with serveral versions of the code, versions which could potentially break or conflict with each other. When working with branches, we recommend you use a GUI as things can get quite complicated otherwise. Creating a new branch is as simple as selecting _create new branch_ in _Fork_. You can then merge branches back into the main branch, or let them die!
 
 Finally, once you've made changes to a forked repository, you can ask the original creator if they would like to incorporate the changes you've made into their repository. This is called a _pull request_. This is as easy as pushing any changes you've made to your github fork of the repository, and then selecting _pull requests_.
-
----
-
-As both of us (the authors) are specialised in music, we deal with Max patches (JSON files essentially), SuperCollider, javascript and Python files all the time and large projects that integrate a number of different text based formats alongside audio files for corpora and recordings. One practice that can be seen often is to have a number of top-level Max patchers.
