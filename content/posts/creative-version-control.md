@@ -82,7 +82,7 @@ If you go to the project folder in your finder, you'll find that it appears to b
 
 <img src="/img/cvc/02_hidden_git_folder.png" alt="see hidden folder">
 
-You won't ever need to do anything with this folder, so you can go ahead and hide it again. But know that this is where all the magic of git happens! When you create a repository with one of the programs like _Fork_ or _GitKraken_, this folder gets created automatically. Now we can start adding files to our project.
+Alternatively you could use the `ls -a` in the command line to see all the hidden files and folders. You won't ever need to do anything with this folder, so you can go ahead and hide it again. But know that this is where all the magic of git happens! When you create a repository with one of the programs like _Fork_ or _GitKraken_, this folder gets created automatically. Now we can start adding files to our project.
 
 ## commiting (commit) to a repository
 
@@ -96,16 +96,24 @@ If we open up our repository in on of the programs talked about above, we can vi
 
 How can we add the other file to our git repository? We could do it in the same way, using the comand line. However, it may be easier to use the GUI in _fork_. If we look at the top left, we see that there is one change that can be commited. Let's click on this to see the changes. We see that the file we didn't initially commit is there. To make a new commit, we first need to _stage_ the changes we want to make, add a _comment_ for out commit in the bottom right (this was the text editor part from before), then click _commit_! Now if we go back to the _master branch_, we see that there is a new commit.
 
-<img src="/img/cvc/05_second_commit.png" alt="initial commit in fork">
+<img src="/img/cvc/05_second_commit.png" alt="second commit">
 
 We now see how we can keep a log of how a project progresses, and use this to go back to a project's previous state. But what if we want to have this log online, and let other people work on it also? This is where something like [github](https://github.com) will come in.
 
 ## pushing (push) changes to a repository
 
-First of all, we're going to have to get our repository linked up to _github_. To do this, go to _github_ and 
+First of all, we're going to have to get our repository linked up to _github_. To do this, go to _github_ and select _new repository_. You'll be presented with a screen like the one below. You can give it a name and a description, and set a few other parameters. The _.gitignore_ is for giving git files you don't want to be tracked (for example, _.wav_ audio files are heavy and not necesarily something you would want to upload to github). We can also choose to make a _README.md_ file - this is a file in the root directory of you project folder which will appear on the github page of the repository, usually explaining what the project is about. It's written in markdown format, and fairly simple to format. 
+
+<img src="/img/cvc/06_github_repo_create.png" alt="creating a repo on github">
+
+Next you'll be directed to the page below. Github makes our life easier by telling us exactly what to do! We need to link up the folder on our local machine to the repository made on github. To do this, in the command line we copy the the text under the **...or push an existing repository from the command line** section, the `git remote add origin (ssh or https)` command. This will link up you repos.
+
+<img src="/img/cvc/07_github_ssh.png" alt="created repo github">
+
+Note that all of this can be done in the programs talked about earlier with an easy to use GUI, but it's useful to know how it's done in the command line. The last step is to _push_ content on your local machine onto the github repo. You can do this using the `git push` command, or by finding the _push_ button within you program. Note that when pushing, you can choose which _branch_ to push to, we'll go over this in the next, final section.
 
 ## forking (fork) a repository
 
-
+Say we would like to work of someone else's repository. We will need to _fork_ the repository in question. This is as easy as going to the repository of github, and pressing _Fork_ in the top right of the screen. Below we see that we have forked the _FrameLib_ repository. 
 
 As both of us (the authors) are specialised in music, we deal with Max patches (JSON files essentially), SuperCollider, javascript and Python files all the time and large projects that integrate a number of different text based formats alongside audio files for corpora and recordings. One practice that can be seen often is to have a number of top-level Max patchers.
