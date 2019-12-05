@@ -12,3 +12,4 @@ headless = true
 - [people]({{< relref "/docs/people" >}})
 - [projects]({{< relref "/docs/projects" >}})
 - [contact]({{< relref "/docs/contact" >}})
+- [contribute]({{< relref "/docs/contribute" >}})
