@@ -17,7 +17,7 @@ On MacOS you can open up the default terminal by opening Terminal.app. Many peop
 ## The shell
 When you open the terminal you are presented with almost nothing, just a small block of text on the left of the screen with the name of your computer. At this point you are ready to execute some commands.
 
-<img src="/img/cvc/blank-terminal.png" alt="A blank ZSH terminal">
+{{< image "/img/cvc/blank-terminal.png" "A blank ZSH terminal" >}}
 
 The first thing to know is that the application which interprets the commands you send to the terminal is a program or _shell_. There are many flavours of _shells_ that you can use and by default MacOS will use **bash** or **zsh** depending on your OS version. There are small differences between these two shells and for the purpose of what this article covers it is not necessary to understand too deeply how they vary. 
 
@@ -26,16 +26,16 @@ The second concept to understand is that the shell is always _somewhere_ in your
 
 Try typing the command **ls** now and see what happens.
 
-<img src="/img/cvc/ls.png" alt="Executing the 'ls' command">
+{{< image "/img/cvc/ls.png" "Executin the ls command" >}}
 
 Congratulations, you just executed your first program from the command-line! **ls** is a program that lists information about the files and folders of the current directory that you are in. As you can see below, what is displayed by executing **ls** has parity the files and folders listed in finder at the same location.
 
-<img src="/img/cvc/finder.png" alt="Parity with the finder">
+{{< image "/img/cvc/finder.png" "Parity with the finder" >}}
 
 ## cd
 Now you might be wondering how you can navigate to different folders and files. The **cd** (change directory) allows you to move around as you would in Finder or a GUI application. As you can see below, I execute the command `cd dev` which then transports my **current working directory** to the dev folder. The **prompt** of my command-line changes to reflect this movement throughout the filesystem and I can then execute `ls` again to show files inside **~/dev**. Whenever we pass additional bits of text to a program these are called _arguments_. In this case `dev` is an argument to `cd` and cd interprets what you mean by the simple virtue that it immediately comes after `cd`. Other programs can take arguments with a flag in both a long and short format like `-l` or `-limit` for example.
 
-<img src="/img/cvc/cd.png" alt="Parity with the finder">
+{{< image "/img/cvc/cd.png" "Changing directories" >}}
 
 ## mkdir
 
@@ -43,19 +43,19 @@ Say now you want a new folder in this directory and to create a new file inside 
 
 Let's execute the command `mkdir` (make directory) with an argument for the name of the folder that we would like to create. We can verify that the folder was created by looking at Finder and by changing directory into this new folder.
 
-<img src="/img/cvc/mkdir.png" alt="the mkdir command">
+{{< image "/img/cvc/mkdir.png" "The mkdir command" >}}
 
 ## touch
 
 Now to create a file, we can execute the program `touch` with the new file name as the first argument. Again we can verify that this new file exists by looking in the finder as well as calling `ls` again to print the files inside of a directory.
 
-<img src="/img/cvc/touch.png" alt="the touch command">
+{{< image "/img/cvc/touch.png" "The touch command" >}}
 
 ## piping
 
 One final concept to understand is that the inputs and outputs of the shell can be 'piped' between each other as they emit and receive information that fits a specification. For example, I can pipe `ls` to another program called `grep` which you might like to think of as a filter of that text like find/replace in a text editor. In the below example, I pipe the output of `ls` to `grep` so that I can find all the files that contain the phrase _gesture_maker_. You might also be interested in the `>` redirection pipe which allows you to pipe the output of a command line program to a file. For example, try `ls > ls_output.txt` which will create a new file contaning the output of ls.
 
-<img src="/img/cvc/piping.png" alt="piping commands">
+{{< image "/img/cvc/piping.png" "Piping commands" >}}
 
 This just about covers enough material to get you started in the terminal. Of course, the best way to learn is to try using the terminal and to get stuck. Once you become more fluent in the commands it can be a great way to interact with your operating system with just your keyboard and with a minimal interface. It is also helpful for later when you want to create and manage git respositories more fluently and without a GUI application.
 
@@ -73,11 +73,11 @@ To make things easier, it can be useful to download a _git client_ on your machi
 
 So, you have an idea for a great project where version control would be useful. Maybe this project exists already, maybe you haven't even started it yet. You'll want to make sure that all the files concerning your project are grouped into one folder. Next, we need to create the hidden **.git** folder inside this project folder which will handle all the git functionalities. We can do this from the command line - below we've gone to the desktop, created our project folder, then used the command `git init` and we're done!
 
-<img src="/img/cvc/01_innit_cmd_line.png" alt="git innit command">
+{{< image "/img/cvc/01_innit_cmd_line.png" "git init command" >}}
 
 If you go to the project folder in your finder, you'll find that it appears to be empty. This is because the **.git** folder is hidden - to show it, hit `Cmd+Shift+.` and you should see this...
 
-<img src="/img/cvc/02_hidden_git_folder.png" alt="see hidden folder">
+{{< image "/img/cvc/02_hidden_git_folder.png" "see hidden folders" >}}
 
 Alternatively you could use the `ls -a` in the command line to see all the hidden files and folders. You won't ever need to do anything with this folder, so you can go ahead and hide it again. But know that this is where all the magic of git happens! When you create a repository with one of the programs like _Fork_ or _GitKraken_, this folder gets created automatically. Now we can start adding files to our project.
 
@@ -85,15 +85,15 @@ Alternatively you could use the `ls -a` in the command line to see all the hidde
 
 Let's create some simple, empty files using the `touch` command. These files are now in the folder, but we haven't told git to add them yet. To create a new _commit_ (a state of your project that you can go back to), there are two parts: _adding_ files and modifications, then _commiting_ these added files and modifications. Here we add files using the  `git add` command, then commit using the `git commit` command. When you commit, you'll be asked to describe the modifications made - we just wrote _initial commit_, to indicate that this was the first commit to git (we then hit ESC and type :wq to exit the text editor).
 
-<img src="/img/cvc/03_commit.png" alt="command line commit">
+{{< image "/img/cvc/03_commit.png" "command line commit" >}}
 
 If we open up our repository in one of the programs talked about above, we can visualise these changes we made. Here, in [Fork](https://git-fork.com), we see our initial commit, with the two files we added. A quick note, we could have just used the command `git commit -a` to add and commit everything, and `git commit -m "initial commit"` to bypass the text editor part.
 
-<img src="/img/cvc/04_initial_commit_fork.png" alt="initial commit in fork">
+{{< image "/img/cvc/04_initial_commit_fork.png" "initial commit in fork" >}}
 
 How can we add the other file to our git repository? We could do it in the same way, using the command line. However, it may be easier to use the GUI in _Fork_. If we look at the top left, we see that there is one change that can be commited. Let's click on this to see the changes. We see that the file we didn't initially commit is there. To make a new commit, we first need to _stage_ the changes we want to make, add a _comment_ for out commit in the bottom right (this was the text editor part from before), then click _commit_! Now if we go back to the _master branch_, we see that there is a new commit.
 
-<img src="/img/cvc/05_second_commit.png" alt="second commit">
+{{< image "/img/cvc/05_second_commit.png" "second commit" >}}
 
 We now see how we can keep a log of how a project progresses, and use this to go back to a project's previous state. But what if we want to have this log online, and let other people work on it also? This is where something like [github](https://github.com) will come in.
 
@@ -101,11 +101,11 @@ We now see how we can keep a log of how a project progresses, and use this to go
 
 First of all, we're going to have to get our repository linked up to _github_. To do this, go to _github_ and select _new repository_. You'll be presented with a screen like the one below. You can give it a name and a description, and set a few other parameters. The _.gitignore_ is for giving git files you don't want to be tracked (for example, _.wav_ audio files are heavy and not necesarily something you would want to upload to github). We can also choose to make a _README.md_ file - this is a file in the root directory of you project folder which will appear on the github page of the repository, usually explaining what the project is about. It's written in markdown format, and fairly simple to format. 
 
-<img src="/img/cvc/06_github_repo_create.png" alt="creating a repo on github">
+{{< image "/img/cvc/06_github_repo_create.png" "creating a repo on github" >}}
 
 Next you'll be directed to the page below. Github makes our life easier by telling us exactly what to do! We need to link up the folder on our local machine to the repository made on github. To do this, in the command line we copy the the text under the **...or push an existing repository from the command line** section, the `git remote add origin <ssh or https>` command. This will link up your repositories.
 
-<img src="/img/cvc/07_github_ssh.png" alt="created repo github">
+{{< image "/img/cvc/07_github_ssh.png" "created repo github" >}}
 
 Note that all of this can be done in the programs talked about earlier with an easy to use GUI, but it's useful to know how it's done in the command line. The last step is to _push_ content on your local machine onto the github repo. You can do this using the `git push` command, or by finding the _push_ button within you program. Note that when pushing, you can choose which _branch_ to push to, we'll go over branches in the next, final section.
 
@@ -113,7 +113,7 @@ Note that all of this can be done in the programs talked about earlier with an e
 
 Say we would like to work off of someone else's repository. We will need to _fork_ the repository in question. This is as easy as going to the repository on github, and pressing _fork_ in the top right of the screen. We will then need to _clone_ this repository onto our machine. We can do this from the command line with the `git clone <repository url>` or through one of our programs. Below we see that we have _forked_ the _FrameLib_ repository and cloned it onto our machine. This is our own version of _FrameLib_ at the time it was forked.
 
-<img src="/img/cvc/08_forked_repo.png" alt="forked framelib repository">
+{{< image "/img/cvc/08_forked_repo.png" "forked framelib repository" >}}
 
 Note that there are several _branches_ which can run in parallel indicated by the coloured lines along the side. This is so that you can work with serveral versions of the code, versions which could potentially break or conflict with each other. When working with branches, we recommend you use a GUI as things can get quite complicated otherwise. Creating a new branch is as simple as selecting _create new branch_ in _Fork_. You can then merge branches back into the main branch, or let them die! The best part about using **git** branches and commits is that you can now revert between states of a project as well as states that belong to a specific branch. Perhaps you intend to make implement a new synth in your Supercollider instrument but you would like to keep a stable branch of the code. In this situation you could create a new branch to do this work on. At any stage you can swap between this new experimental branch and your master branch to alternate between two different versions of the codebase. In a GUI application like _Fork_ its as simple as double clicking the different branches on the left-most side of the window. The same goes for commits allowing you to explore different states of your project.
 
