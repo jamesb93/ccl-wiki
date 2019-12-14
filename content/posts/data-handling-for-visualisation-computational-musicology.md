@@ -13,7 +13,7 @@ Before looking to build our own technology to solve the problems of data storage
 
 ### `entrymatcher` by [Alex Harker](https://github.com/AlexHarker/AHarker_Externals): 
 
-although `entrymatcher` ships with extremely rapid queries and functionality for easily shifting(especailly on the bleeding edge compiles), has an unsuitable querying language that is not suited to our research aims. Also, despite the existence of neat and concise C++ code to build into a Max object, something more application
+Although `entrymatcher` ships with extremely rapid queries (especailly on the bleeding edge compiles), it's querying language is not suited to our research aims and preferences compositional aims. Also, despite the existence of neat and concise C++ code to build into a Max object it would not be frictionless to port this particular object to other environments.
 
 ### Max native `dict` object 
 
