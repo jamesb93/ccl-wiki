@@ -1,4 +1,4 @@
-# Data handling for computational musicology and visualiation: early stages
+# The problem with data
 
 ### [Laurens van der Wee](https://www.kelyje.nl)
 ---
