@@ -6,7 +6,8 @@ headless = true
 ---
 
 - [version control primer]({{< relref "/posts/version-control" >}})
-- [the problem with data]({{< relref "/posts/data-handling-for-visualisation-computational-musicology" >}})
+- [the problem with data]({{< relref "/posts/data-handling" >}})
+- [modular synthesis]({{< relref "/posts/modular-synthesis" >}})
 
 **info**
 ---
