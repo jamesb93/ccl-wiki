@@ -18,8 +18,6 @@ ins 3:
 outs 1:
     "distorted_signal"
 
-init:
-    dummy = 0.0
 sample:
     offset = clip(in2, 0.0, 1.0)
     drive = clip(in3, 0.0, 1.0)
