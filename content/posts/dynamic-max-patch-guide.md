@@ -149,7 +149,7 @@ function set_object(obj_name){
 }
 ```
 
-Note that we created a global variable, *main_object_localtion*, giving the object location. The next step is to get a list of all of the created object's attributes. To do this we need to create some more objects in the patch, as we shall be using the _getattr_ object. Consider the following function:
+Note that we created a global variable, *main_object_location*, giving the object location. The next step is to get a list of all of the created object's attributes. To do this we need to create some more objects in the patch, as we shall be using the _getattr_ object. Consider the following function:
 
 ```javascript
 main_object_location = [326, 120];
