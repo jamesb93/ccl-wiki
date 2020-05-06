@@ -9,6 +9,7 @@ headless = true
 - [handling data]({{< relref "/posts/data-handling" >}})
 - [sc + mod synthesis]({{< relref "/posts/modular-synthesis" >}})
 - [dynamic max patches]({{< relref "/posts/dynamic-max-patch-guide" >}})
+- [omni workshop]({{< relref "/posts/omni" >}})
 
 **info**
 ---
