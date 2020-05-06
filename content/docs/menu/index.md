@@ -5,9 +5,10 @@ headless = true
 **blog/articles**
 ---
 
-- [version control primer]({{< relref "/posts/version-control" >}})
-- [the problem with data]({{< relref "/posts/data-handling" >}})
-- [modular synthesis]({{< relref "/posts/modular-synthesis" >}})
+- [version control primer] ({{< relref "/posts/version-control" >}})
+- [handling data] ({{< relref "/posts/data-handling" >}})
+- [sc + mod synthesis] ({{< relref "/posts/modular-synthesis" >}})
+- [dynamic max patches] ({{< relref "/posts/dynamic-max-patch-guide" >}})
 
 **info**
 ---
