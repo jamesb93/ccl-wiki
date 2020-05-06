@@ -32,7 +32,9 @@ What is also really great about this project is the attention to inclusiveness a
 
 The links below take you to all the `omni` related things:
 
-### [Francesco's Github](https://vitreo12.github.io)
+### [Francesco's Github](github.com/vitreo12)
+
+### [Omni](https://vitreo12.github.io)
 
 ### [Omni for SuperCollider](github.com/vitreo12/omnicollider)
 
