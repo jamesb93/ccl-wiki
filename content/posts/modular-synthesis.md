@@ -31,9 +31,9 @@ As with other modular systems, eurorack synthesizers center around the concept o
 
 ## Hybrid audio: digital meets analog
 
-It is possible to create hybrid systems that leverage on both the ease of digital audio manipulation and the complexity and richness of analog eurorack sinthesizers. The use of DC coupled audio interfaces, or, alternatively, eurorack modules like the [Expert Sleepers ES-8](https://www.expert-sleepers.co.uk/es8.html), allow the possibility of sharing audio streams between the eurorack system and a computer, opening up for even more complex interactions between the two worlds.
+It is possible to create hybrid systems that can leverage the ease of digital audio manipulation and the complexity and richness of analog eurorack sinthesizers. The use of DC coupled audio interfaces, or, alternatively, eurorack modules like the [Expert Sleepers ES-8](https://www.expert-sleepers.co.uk/es8.html), allow the possibility of sharing audio streams between the eurorack system and a computer, opening up for even more complex interactions between the two worlds.
 
-This is a picture from my setup, which is built around the concept of being a noise generating machine. All the modulations are then routed from the computer to the system via the ES-8 module. On the digital side, my software of choice is SuperCollider programming language.
+This is a picture from my setup which is built around the concept of being a noise generating machine. All the modulations are then routed from the computer to the system via the ES-8 module. On the digital side, my software of choice is SuperCollider programming language.
 
 {{< image "/img/modular-synthesis/eurorack-view.jpg" "my eurorack setup" >}}
 
