@@ -33,9 +33,13 @@ As with other modular systems, eurorack synthesizers center around the concept o
 
 It is possible to create hybrid systems that leverage on both the ease of digital audio manipulation and the complexity and richness of analog eurorack sinthesizers. The use of DC coupled audio interfaces, or, alternatively, eurorack modules like the [Expert Sleepers ES-8](https://www.expert-sleepers.co.uk/es8.html), allow the possibility of sharing audio streams between the eurorack system and a computer, opening up for even more complex interactions between the two worlds.
 
-This is a picture from my setup, which is built around the concept of being a noise generating machine. All the modulations are then routed from the computer to the system via the ES-8 module. On the digital side,my software of choice is SuperCollider programming language.
+This is a picture from my setup, which is built around the concept of being a noise generating machine. All the modulations are then routed from the computer to the system via the ES-8 module. On the digital side, my software of choice is SuperCollider programming language.
 
 {{< image "/img/modular-synthesis/eurorack-view.jpg" "my eurorack setup" >}}
+
+To make the system work, I have setup a simple shell scripts which executes several commands in series. These commands allow me to boot a `jack` server which aggregates my two soundcards: an old Scarlett 2i2 and an Expert Sleepers ES-8. The command on the left boots the main jack server on the 2i2 with a high scheduling priority (also, note, I'm using a real-time patched linux kernel to be able to set custom priorities on certain processes) with a sampling rate of 48000 samples and a vector size of 128 samples. On the top right, I'm using the `jack_load` command to link the ES8 to the running server, effectively creating an aggregate device using both the soundcards. Finally, after booting the SuperCollider server, I'm executing the command on the bottom right, `aj-snapshot`, which is a nice utility to restore saved jack connections. Of course, I developed my own shell script that does all these things, so that I can only call `audio_setup` (that's the name I gave the script) and have everything booted up and ready to play with. 
+
+{{< image "/img/modular-synthesis/jack-boot.png" "boot the jack server" >}}
 
 As an example, here a cubic interpolated noise function ( `LFNoise2.ar` ) is sent to the first output of the ES-8, and then used as FM input for the [Instruo CS-L](https://www.instruomodular.com/product/csl/) oscillator. In my setup, the outputs from SuperCollider to the eurorack system correspond to values `2..18` (16 in total), hence why here `Out.ar(2, ...)` is used. The first line of code ( `Out.ar([0, 1], ...)` ) simply plays the output from the eurorack system to the speakers. 
 
