@@ -34,6 +34,4 @@ This website acts as form of documentation for what happens in the hackspace and
 
 We currently meet in **G/01** at the University on **Fridays** from **2pm - 5pm**.
 
-You can also follow our public calendar of events [here](https://boogiebox-nextcloud.cloud.seedboxes.cc/index.php/apps/calendar/p/a93AtxzmoQBBoEap/Hackspace)
-
-Any questions can be forwarded to the admin. james.bradbury(at)hud.ac.uk
+Any questions can be forwarded to the admin hackspace(at)jamesbradbury.net
