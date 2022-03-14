@@ -13,7 +13,7 @@
 "Jacob Hart is a musicologist, musician and PhD student at the University of Huddersfield. He makes tools in Max, Python and Javascript that help musicologists analyse sound through technological mediums."
 >}}
 
-{{< person "jbradbury" "James Bradbury" "https://jamesbradbury.xyz"
+{{< person "jbradbury" "James Bradbury" "https://jamesbradbury.net"
 "James Bradbury is a musician and creative coder living in Huddersfield. His music implements computers as co-creators, exploring the co-adaptive process of music making with machines."
 >}}
 
