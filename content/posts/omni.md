@@ -1,6 +1,6 @@
 # Omni workshop and a review
 
-### [James Bradbury](https://www.jamesbradbury.xyz)
+### [James Bradbury](https://www.jamesbradbury.net)
 ---
 
 A couple of weeks ago the creative coding hackspace was conducted online via [Jitsi](meet.jit.si). We had a great turnout with people attending from all over the UK and even a parking lot in Florida, US (Thanks Jorge). In this online hacking session we gave control over to [Francesco](github.com/vitreo12) who gave us a high octane crash course in his new domain specific language called [`omni`](https://vitreo12.github.io). I have to say, `omni` is really elegant and I'm excited to use it for most of my DSP needs in the future. The code that you write in `omni` is compiled to shared or static libraries that can then be accessed or compiled elsewhere, making one of the key pros of this DSL its portability. So far Francesco has created wrappers for both Max and SuperCollider where `omni` code is compiled to objects and ugens respectively. The wrapper also takes away a lot of the complexity of developing for these environments allowing you focus on the DSP side of things.

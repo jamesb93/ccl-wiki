@@ -1,6 +1,6 @@
 # Creative Version Control
 
-### [James Bradbury](https://www.jamesbradbury.xyz) and [Jacob Hart](https://jacob-hart.com)
+### [James Bradbury](https://www.jamesbradbury.net) and [Jacob Hart](https://jacob-hart.com)
 ---
 # Introduction
 All creative coders can benefit from some form of version control for their creative work. Not only does version control provide a mechanism for backing up work it can aid collaboration, assist in tracking strands of ideas and maintain a chronological history of steps that culminate in the final output.
